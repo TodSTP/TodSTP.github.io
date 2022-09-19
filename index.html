@@ -1,0 +1,358 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Suthipong Portfolio</title>
+	<link rel="icon" href="img/freelance.png" type="image/icon type">
+	<!-- Tailwind -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<!-- Alpine -->
+	<script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+	<!-- AOS -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- Custom style -->
+	<link rel="stylesheet" href="style.css" />
+	<!-- Poppins font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+		/* CSS only for demo purpose*/
+		#btn-back-to-top {
+			position: fixed;
+			display: none;
+			scroll-behavior: smooth;
+		}
+		
+	</style>
+</head>
+
+<body class="antialiased bg-white">
+	<!-- navbar -->
+	<div x-data="{ open: false }" class=" w-full text-gray-100 "style="background-color:rgba(16, 9, 53, 0.964);" >
+		<div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+			<div class="flex flex-row items-center justify-between py-6">
+				<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+						<path x-show="!open" fill-rule="evenodd"
+							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+							clip-rule="evenodd"></path>
+						<path x-show="open" fill-rule="evenodd"
+							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</button>
+			</div>
+
+			<nav :class="{ 'transform md:transform-none': !open, 'h-full': open }"
+				class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0">
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-400 focus:outline-none focus:shadow-outline"
+					href="#">Home</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-400 focus:outline-none focus:shadow-outline"
+					href="#Work">Work Experiences</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-400 focus:outline-none focus:shadow-outline"
+					href="#Act">Activities</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-400 focus:outline-none focus:shadow-outline"
+					href="#Contact">Contact Me</a>
+
+			</nav>
+		</div>
+	</div>
+
+	<div style="background-color:rgba(16, 9, 53, 0.964);">
+		<div class="max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row items-start">
+			<!--Left Col-->
+			<!-- Desktop -->
+			<div class="hidden lg:block">
+				<div class="w-full -mt-10 ml-28 relative" id="boy">
+					<img data-aos="fade-up" data-aos-once="true" class="w-80 mx-auto pt-28 2xl:-mb-20"
+						src="img/boy.png" />
+					<!-- ux class -->
+					<!-- <div data-aos="fade-up" data-aos-delay="500" data-aos-once="true" class="absolute bottom-14 -left-4 sm:left-2 sm:bottom-20 lg:bottom-24 lg:-left-4 floating">
+					<img class="bg-white bg-opacity-80 rounded-lg h-20 sm:h-28" src="img/ux-class.svg" alt="">
+				</div> -->
+				</div>
+			</div>
+
+			<!-- Mobile -->
+			<div class="block lg:hidden justify-center">
+				<div class="flex flex-col w-full justify-center items-start mt-8 relative">
+					<h1 data-aos="fade-right" data-aos-once="true" class="text-5xl font-bold leading-tight text-lightblue">
+						<span class="text-yellow-500">Welcome</span> <br>to MY PORTFOLIO
+					</h1>
+					<p data-aos="fade-down" data-aos-once="true" data-aos-delay="300"
+						class="leading-normal text-white mt-5">
+						My name is <span class="font-bold">Suthipong Shanamoon</span> , but you can called me ' <span
+							class="font-bold">Tod</span> '<br>
+						I am a student in the Faculty of Information Technology <br>
+						at King Mongkut’s University of Technology Thonburi (KMUTT)</p>
+				</div>
+			</div>
+
+			<!--Right Col-->
+			<!-- Desktop -->
+			<div class="hidden lg:block">
+				<div class="flex flex-col w-full justify-center items-start w-6/12 mr-20 mt-2 relative">
+					<h1 data-aos="fade-right" data-aos-once="true"
+						class="text-5xl font-bold leading-tight text-lightblue ml-60 mt-20">
+						<span class="text-yellow-500">Welcome</span> <br>to MY PORTFOLIO
+					</h1>
+					<p data-aos="fade-down" data-aos-once="true" data-aos-delay="300"
+						class="leading-normal text-white mb-8 ml-60 mt-5">
+						My name is <span class="font-bold">Suthipong Shanamoon</span> , but you can called me ' <span
+							class="font-bold">Tod</span> '<br>
+						I am a student in the Faculty of Information Technology <br>
+						at King Mongkut’s University of Technology Thonburi (KMUTT)</p>
+				</div>
+			</div>
+
+			<!-- Mobile -->
+			<div class="block lg:hidden grid justify-items-center">
+				<div class="w-full -mt-10 relative" id="girl">
+					<img data-aos="fade-up" data-aos-once="true" class="w-80 mx-auto pt-28 2xl:-mb-20"
+						src="img/girl.png" />
+				</div>
+			</div>
+
+		</div>
+		<div class="text-white -mt-14 sm:-mt-24 lg:-mt-36 z-40 relative">
+			<svg class="xl:h-40 xl:w-full" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+				preserveAspectRatio="none">
+				<path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+					fill="currentColor"></path>
+			</svg>
+			<div class="bg-white w-full h-20 -mt-px"></div>
+		</div>
+	</div>
+
+	<!-- container -->
+	<div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-hidden">
+
+		<!-- All-In-One Cloud Software. -->
+		<div data-aos="flip-up" class="max-w-xl mx-auto text-center mt-10">
+			<h1 id="Work" class="font-bold text-darken my-3 text-2xl">Work <span class="text-lightblue-500">Experiences</span></h1>
+		</div>
+		<!-- card -->
+		<div class="grid md:grid-cols-2 gap-12 md:gap-5 mt-20">
+			
+			<div data-aos="fade-up" data-aos-delay="150" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #202121;"
+					class="rounded-full w-64 h-64 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<img class="w-54" src="img/uxui.png" />
+				</div>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">UX/UI Designer</h1>
+				<p class="px-4 text-gray-500">Website SIT Hello World Ermine for IT KMUTT Student. It is a website that describes the lines of work and how to apply for the project.
+					Information technology juniors and everyone in the faculty.</p>
+			</div>
+			<div data-aos="fade-up" data-aos-delay="300" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #ee9170;"
+					class="rounded-full w-64 h-64 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<img class="w-36" src="img/starter_logo.png" />
+				</div>
+				<h1 class="font-medium text-xl lg:px-14 text-darken h-10">Graphic Designer</h1>
+				<p class="px-4 text-gray-500">Project “Starter Pack for student SIT KMUTT”. It is a basic adjustment project for SIT first-year students at the Faculty of
+					Information Technology.</p>
+			</div>
+		</div>
+
+		<div class="grid md:grid-cols-2 gap-12 md:gap-5 mt-32">
+			<div data-aos="fade-up" data-aos-delay="150" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #3f3f3f;"
+					class="rounded-full w-64 h-64 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<img class="w-36" src="img/window.png" />
+				</div>
+				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Integrated Project</h1>
+				<p class="px-4 text-gray-500">This is a experience in subject of course at my faculty to improve coding skills.
+				</p>
+			</div>
+			<div data-aos="fade-up" data-aos-delay="300" class="bg-white shadow-xl p-6 text-center rounded-xl">
+				<div style="background: #6dcbea;"
+					class="rounded-full w-64 h-64 flex items-center justify-center mx-auto shadow-lg transform -translate-y-12">
+					<img class="w-48" src="img/freelance.png" />
+				</div>
+				<h1 class="font-medium text-xl lg:px-14 text-darken h-10">Freelance</h1>
+				<p class="px-4 text-gray-500">It's a graphic designer for general work consisting of web page
+					design and design poster or logo for some product.</p>
+			</div>
+		</div>
+
+		<!-- lorem -->
+		<div class="mt-28">
+			<div data-aos="flip-down" class="text-center max-w-screen-md mx-auto">
+				<h1 id="Act" class="text-3xl font-bold mb-4">My activities<span class="text-lightblue-500"> in University</span></h1>
+				<p class="text-gray-500">I'm always looking for new hobbies or activities to do in my leisure time to help me reach my full potential at work. You can see it in the below.</p>
+			</div>
+
+		</div>
+
+		<div class="sm:flex items-center sm:space-x-8">
+			<div data-aos="fade-right" class="sm:w-1/2 relative">
+				
+			</div>
+			<div data-aos="fade-left" class="sm:w-1/2 relative sm:mt-0">
+				
+			</div>
+		</div>
+
+		<div class="md:flex mt-20 md:space-x-10 items-start">
+			<div data-aos="fade-down" class="md:w-7/12 relative">
+				<img class="relative z-50 floating rounded-xl" src="img/starter_pack_27.jpg" alt="">
+			</div>
+			<div data-aos="fade-down" class="md:w-5/12 mt-20 md:mt-0 text-gray-500">
+				<h1 class="text-3xl font-semibold text-darken lg:pr-40">Starter Pack <span class="text-lightblue-500">IT #27</span> designed</h1>
+				<div class="flex items-center space-x-5 my-5">
+					<p>Project “Starter Pack for student SIT KMUTT”. It is a basic adjustment project for first-year juniors studies at the Faculty of
+						Information Technology.</p>
+				</div>
+
+				
+			</div>
+		</div>
+
+		<!-- Tools For Teachers And Learners -->
+		<div class="flex flex-col md:flex-row items-center md:space-x-10 mt-16">
+			<div data-aos="fade-right" class="md:w-1/2 lg:pl-14">
+				<h1 class="text-darken font-semibold text-3xl lg:pr-56">Hello World <span class="text-lightblue-500">Ermine</span></h1>
+				<p class="text-gray-500 my-4 lg:pr-32">SIT Hello World is a project for make basic website for first-year students.I am a staff and team advisor for juniors member in my faculty. My duty is to consult to create prototype and wireframe.</p>
+			</div>
+			<img data-aos="fade-left" class="md:w-1/2 rounded-xl" src="img/helloworld.png">
+		</div>
+
+		<!-- Assessments, Quizzes, Tests -->
+		<div class="mt-20 flex flex-col-reverse md:flex-row items-center md:space-x-10">
+			<div data-aos="fade-right" class="md:w-6/12">
+				<img class="md:w-full" src="img/wizardofcoding.jpg">
+			</div>
+			<div data-aos="fade-left" class="md:w-6/12 md:transform md:-translate-y-20">
+				<h1 class="font-semibold text-darken text-3xl lg:pr-64">IT 27  <span
+						class="text-lightblue-500">Wizard of coding</span> designed</h1>
+				<p class="text-gray-500 my-5 lg:pr-52">IT27 Wizard of coding is make relationship between junior and senior.I'm designed posters and backgrounds for use in this camp. 
+				</p>
+			</div>
+		</div>
+
+		
+		<div class="flex flex-col md:flex-row items-center mt-12">
+			<div data-aos="fade-right" class="md:w-5/12">
+				<h1 class="text-darken font-semibold text-3xl leading-tight lg:pr-40">Starter Pack <span
+						class="text-lightblue-500">IT #28</span> designed</h1>
+				<p class="my-5 lg:pr-14">“Starter Pack for student SIT KMUTT”. It is a basic adjustment project for first-year juniors studies at the Faculty of Information Technology.I'm a design-team , staff and team advisor for juniors member in my faculty.
+				</p>
+			</div>
+			<img data-aos="fade-left" class="md:w-7/12 rounded-xl" src="img/starter_pack_28.jpg">
+		</div>
+
+		
+		<div data-aos="zoom-in-up" class="my-14 flex flex-col lg:flex-row lg:space-x-20">
+			
+
+		<!-- Skills -->
+		<div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-hidden">
+		<div class="max-w-4xl mx-auto">
+			<h1 id="Work" class="font-bold text-darken my-3 text-2xl text-center">Technical Skills <span class="text-lightblue-500 ">that I use</span></h1>
+			<div class="grid grid-cols-3 lg:grid-cols-3 gap-4 justify-items-center mt-20">
+				<!-- <img class="h-7 opacity-50" src="https://www.svgrepo.com/show/305663/adobe-photoshop.svg"> -->
+				<p>UX/UI</p>
+				<p>HTML</p>
+				<p>Web Design</p>
+			</div>
+			<div class="grid grid-cols-3 lg:grid-cols-3 gap-4 justify-items-center mt-5 lg:mt-10">
+				<p>SQL</p>
+				<p>Java</p>
+				<p>Graphic Design</p>
+			</div>
+			<div class="grid grid-cols-3 lg:grid-cols-3 gap-4 justify-items-center mt-5 lg:mt-10">
+				<p>VueJS</p>
+				<p>PHP</p>
+				<p>Linux Command</p>
+			</div>
+			<div class="grid grid-cols-3 lg:grid-cols-3 gap-4 justify-items-center mt-5 lg:mt-10">
+				<p>CSS</p>
+			</div>
+			<br>
+			<h1 id="Work" class="font-bold text-darken my-3 text-2xl text-center">Tools <span class="text-lightblue-500 ">that I use</span></h1>
+			<div class="grid grid-cols-3 lg:grid-cols-3 gap-4 justify-items-center mt-20">
+				<!-- <img class="h-7 opacity-50" src="https://www.svgrepo.com/show/305663/adobe-photoshop.svg"> -->
+				<img class="h-7 opacity-50" src="img/svg/illustrator.svg">
+				<img class="h-7 opacity-50" src="img/svg/photoshop.svg">
+				<img class="h-7 opacity-50" src="img/svg/figma.svg">
+			</div>
+			<div class="grid grid-cols-3 lg:grid-cols-3 gap-4 justify-items-center mt-5 lg:mt-10">
+				<img class="h-7 opacity-50" src="img/svg/github.svg">
+				<img class="h-7 opacity-50" src="img/svg/procreate.svg">
+				<img class="h-7 opacity-50" src="img/svg/trello.svg">
+			</div>
+			<div class="grid grid-cols-3 lg:grid-cols-3 gap-4 justify-items-center mt-5 lg:mt-10">
+				<img class="h-7 opacity-50" src="img/svg/xd.svg">
+				<img class="h-7 opacity-50" src="img/svg/unity.svg">
+				<img class="h-7 opacity-50" src="img/svg/svc.svg">
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+	<!-- .container -->
+
+	<footer class="mt-32" style="background-color:rgba(16, 9, 53, 0.964);">
+		<div class="max-w-lg mx-auto">
+			<div class="flex pt-12 pb-4 justify-center text-white items-center sm:px-36">
+				<span id="Contact" class="text-2xl pl-5 py-2 font-semibold">Contact Me</span>
+			</div>
+			<div class="flex justify-center items-center ml-4 sm:px-36">
+			<img class="w-40" src="img/line.jpg" /></div>
+			<div class="flex items-center text-gray-400 text-sm justify-center my-5">
+				<a href="https://github.com/TodSTP" class=" px-3">GitHub</a>
+				<a href="https://www.facebook.com/profile.php?id=100004032261483" class="border-l border-gray-400 pl-3">Facebook</a>
+			</div>
+			<div class="text-center text-white">
+				<p class="my-3 text-gray-400 text-xs">&copy;Website 2022 Suthipong Portfolio</p>
+				<div class="py-3 tracking-wide">
+					<p class="font-extralight text-xs">Email : <span class="font-extralight text-xs">Suthipong.tod@gmail.com</span></p>
+					<p class="font-extralight text-xs">Phone number : <span class="font-extralight text-xs">(+66) 92-530-0702</span></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- AOS init -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+		// Get the button
+		let mybutton = document.getElementById("btn-back-to-top");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () {
+			scrollFunction();
+		};
+
+		function scrollFunction() {
+			if (
+				document.body.scrollTop > 20 ||
+				document.documentElement.scrollTop > 20
+			) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+		// When the user clicks on the button, scroll to the top of the document
+		mybutton.addEventListener("click", backToTop);
+
+		function backToTop() {
+			document.documentElement.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			})
+			// document.body.scrollTop = 0;
+			// document.documentElement.scrollTop = 0;
+		}
+	</script>
+</body>
+
+</html>
